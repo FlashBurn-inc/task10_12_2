@@ -71,8 +71,9 @@ dockercompose
 
 docker-compose up -d
 
+echo ${bold}"Tree in work dir"${n}
 tree
-
+echo ${bold}"Docker-compose ps"${n}
 docker-compose ps
-
+echo ${bold}"Check work"${n}
 curl https://${EXTERNAL_IP}:${NGINX_PORT} --cacert ${cert_dir}/web.crt
